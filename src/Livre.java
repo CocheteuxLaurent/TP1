@@ -3,7 +3,7 @@ public class Livre {
         private String titre;
         private String auteur;
         private String genre;
-        private int datePublication;
+        private String datePublication;
 
         public Livre(String titre, String auteur, String genre, String datePublication){
             this.titre = titre;
@@ -24,7 +24,7 @@ public class Livre {
         return genre;
     }
 
-        public  int getDatePublication(){
+        public  String getDatePublication(){
         return datePublication;
     }
 

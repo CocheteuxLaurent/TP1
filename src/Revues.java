@@ -1,10 +1,10 @@
 public class Revues {
 
     private String titre;
-    private int numero;
-    private int anneeEdition;
+    private String numero;
+    private String anneeEdition;
 
-    public Revues(String titre, int numero, int anneeEdition){
+    public Revues(String titre, String numero, String anneeEdition){
         this.titre = titre;
         this.numero = numero;
         this.anneeEdition = anneeEdition;
@@ -14,11 +14,11 @@ public class Revues {
         return titre;
     }
 
-    public  int getNumero(){
+    public  String getNumero(){
         return numero;
     }
 
-    public  int getAnneeEdition(){
+    public  String getAnneeEdition(){
         return anneeEdition;
     }
 }

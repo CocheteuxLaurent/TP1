@@ -2,9 +2,9 @@ public class Dvd {
 
     public String titre;
     public String auteur;
-    public int anneeSortie;
+    public String anneeSortie;
 
-    public Dvd( String titre, String auteur, int anneeSortie){
+    public Dvd( String titre, String auteur, String anneeSortie){
         this.titre = titre;
         this.auteur = auteur;
         this.anneeSortie =anneeSortie;
@@ -18,7 +18,5 @@ public class Dvd {
         return auteur;
     }
 
-    public  int getAnneeSortie(){
-        return anneeSortie;
-    }
+    public  String getAnneeSortie(){return anneeSortie;}
 }
