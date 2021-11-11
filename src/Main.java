@@ -84,19 +84,16 @@ public Livre CreationLivre(){
                       case 1 :
                               Livre livre = this.CreationLivre();
                               bibliothèque.ajoutLivre(livre);
-                              //System.out.println(" Le titre du livre est " + livre.getTitre() + " l'auteur du livre est " + livre.getAuteur() + " le genre est " + livre.getGenre() + " il à été publier en " + livre.getDatePublication());
                       break;
 
                       case 2 :
                               Revues revue = this.CreationRevue();
                               bibliothèque.ajoutRevues(revue);
-                              //System.out.println(" Le titre de la revue est " + revue.getTitre() + " son numero est " +revue.getNumero() + " et sa date d'édition" + revue.getAnneeEdition());
                               break;
 
                       case 3 :
                               Dvd dvd = this.CreationDvd();
                               bibliothèque.ajoutDvd(dvd);
-                              //System.out.println(" Le titre du dvd est " + dvd.getTitre() + " son auteur est " + dvd.getAuteur() + " il est sortie en " + dvd.getAnneeSortie());
                               break;
 
               }
