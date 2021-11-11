@@ -84,7 +84,7 @@ public Livre CreationLivre(){
                       case 1 :
                               Livre livre = this.CreationLivre();
                               bibliothèque.ajoutLivre(livre);
-                      break;
+                              break;
 
                       case 2 :
                               Revues revue = this.CreationRevue();
