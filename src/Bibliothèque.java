@@ -32,18 +32,21 @@ public Bibliothèque (){
  public Livre chercherLivreParAuteur(String auteur) {
   Livre l = null;
   for (int i = 0; i < livres.size(); i++)
-   if (livres.get(i).getAuteur() == auteur)
+   if (livres.get(i).getAuteur() == auteur){
     l = livres.get(i);
+    break;
+  }
   return l;
  }
 
  public Livre chercherLivreParDate(String datePublication) {
   Livre l = null;
   for (int i = 0; i < livres.size(); i++)
-   if (livres.get(i).getAuteur() == datePublication)
+   if (livres.get(i).getAuteur() == datePublication){
     l = livres.get(i);
-  return l;
+    break;
  }
-
+ return l;
 }
 
+}

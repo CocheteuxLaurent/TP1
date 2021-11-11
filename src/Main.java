@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,7 +6,12 @@ public class Main {
     private Bibliothèque bibliothèque;
     private Scanner scanner;
 
-
+    public Main() {
+        bibliothèque= new Bibliothèque();
+        scanner = new Scanner(System.in);
+        this.afficheMenu();
+        scanner.close();
+    }
 
 public Livre ajoutLivre(){
         bibliothèque = new Bibliothèque();
@@ -90,15 +96,17 @@ public Livre ajoutLivre(){
                               bibliothèque.ajoutDvd(dvd);
                               System.out.println(" Le titre du dvd est " + dvd.getTitre() + " son auteur est " + dvd.getAuteur() + " il est sortie en " + dvd.getAnneeSortie());
                               break;
-
+/*
                       case 4 :
 
+                              System.out.println(" Le nom de l'auteur rechercher est " + bibliothèque.chercherLivreParAuteur();
                               break;
 
                       case 5 :
 
+                              System.out.println(" Le nom de l'auteur rechercher est " + bibliothèque.chercherLivreParDate() );
                               break;
-
+*/
               }
          }
         while (choix != 0);
@@ -109,6 +117,7 @@ Main main = new Main();
 //main.ajoutLivre();
 //main.ajoutRevue();
 //main.ajoutDvd();
+
 }
 
 
