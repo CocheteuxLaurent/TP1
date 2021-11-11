@@ -13,10 +13,10 @@ public class Main {
         scanner.close();
     }
 
-public Livre ajoutLivre(){
-        bibliothèque = new Bibliothèque();
-        scanner = new Scanner(System.in);
-
+public Livre CreationLivre(){
+        //bibliothèque = new Bibliothèque();
+        //scanner = new Scanner(System.in);
+        ArrayList<String> livres = new ArrayList<String>();
         System.out.println("Veuillez rentrer le titre du livre ");
         String titre = scanner.nextLine();
         System.out.println("Veuillez rentrer l'auteur du livre ");
@@ -26,14 +26,15 @@ public Livre ajoutLivre(){
         System.out.println("Veuillez rentrer l'année de publication du livre ");
         String datePublication = scanner.nextLine();
         Livre livre = new Livre(titre,auteur,genre,datePublication);
-        scanner.close();
+        //scanner.close();
         return livre;
 }
 
-        public Revues ajoutRevue(){
-                bibliothèque = new Bibliothèque();
-                scanner = new Scanner(System.in);
+        public Revues CreationRevue(){
+                //bibliothèque = new Bibliothèque();
+                //scanner = new Scanner(System.in);
 
+                ArrayList<String> revues = new ArrayList<String>();
                 System.out.println("Veuillez rentrer le titre de la revue ");
                 String titre = scanner.nextLine();
                 System.out.println("Veuillez rentrer le numero de la revue ");
@@ -41,14 +42,15 @@ public Livre ajoutLivre(){
                 System.out.println("Veuillez rentrer l'année d'édition de la revue ");
                 String anneeEdition = scanner.nextLine();
                 Revues revue = new Revues(titre,numero,anneeEdition);
-                scanner.close();
+                //scanner.close();
                 return revue;
         }
 
-        public Dvd ajoutDvd(){
-                bibliothèque = new Bibliothèque();
-                scanner = new Scanner(System.in);
+        public Dvd CreationDvd(){
+                //bibliothèque = new Bibliothèque();
+                //scanner = new Scanner(System.in);
 
+                ArrayList<String> dvds = new ArrayList<String>();
                 System.out.println("Veuillez rentrer le titre du DVD ");
                 String titre = scanner.nextLine();
                 System.out.println("Veuillez rentrer l'auteur du DVD ");
@@ -56,7 +58,7 @@ public Livre ajoutLivre(){
                 System.out.println("Veuillez rentrer l'année de sortie du DVD ");
                 String anneeSortie = scanner.nextLine();
                 Dvd dvd = new Dvd(titre,auteur,anneeSortie);
-                scanner.close();
+                //scanner.close();
                 return dvd;
         }
 
@@ -80,33 +82,23 @@ public Livre ajoutLivre(){
 
               switch (choix){
                       case 1 :
-                              Livre livre = this.ajoutLivre();
+                              Livre livre = this.CreationLivre();
                               bibliothèque.ajoutLivre(livre);
-                              System.out.println(" Le titre du livre est " + livre.getTitre() + " l'auteur du livre est " + livre.getAuteur() + " le genre est " + livre.getGenre() + " il à été publier en " + livre.getDatePublication());
+                              //System.out.println(" Le titre du livre est " + livre.getTitre() + " l'auteur du livre est " + livre.getAuteur() + " le genre est " + livre.getGenre() + " il à été publier en " + livre.getDatePublication());
                       break;
 
                       case 2 :
-                              Revues revue = this.ajoutRevue();
+                              Revues revue = this.CreationRevue();
                               bibliothèque.ajoutRevues(revue);
-                              System.out.println(" Le titre de la revue est " + revue.getTitre() + " son numero est " +revue.getNumero() + " et sa date d'édition" + revue.getAnneeEdition());
+                              //System.out.println(" Le titre de la revue est " + revue.getTitre() + " son numero est " +revue.getNumero() + " et sa date d'édition" + revue.getAnneeEdition());
                               break;
 
                       case 3 :
-                              Dvd dvd = this.ajoutDvd();
+                              Dvd dvd = this.CreationDvd();
                               bibliothèque.ajoutDvd(dvd);
-                              System.out.println(" Le titre du dvd est " + dvd.getTitre() + " son auteur est " + dvd.getAuteur() + " il est sortie en " + dvd.getAnneeSortie());
-                              break;
-/*
-                      case 4 :
-
-                              System.out.println(" Le nom de l'auteur rechercher est " + bibliothèque.chercherLivreParAuteur();
+                              //System.out.println(" Le titre du dvd est " + dvd.getTitre() + " son auteur est " + dvd.getAuteur() + " il est sortie en " + dvd.getAnneeSortie());
                               break;
 
-                      case 5 :
-
-                              System.out.println(" Le nom de l'auteur rechercher est " + bibliothèque.chercherLivreParDate() );
-                              break;
-*/
               }
          }
         while (choix != 0);
