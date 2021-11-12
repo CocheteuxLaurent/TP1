@@ -30,12 +30,23 @@ public Bibliothèque (){
  }
 
  public Livre chercherLivreParAuteur(String auteur) {
+ System.out.println("Livre a trouver");
   Livre l = null;
-  for (int i = 0; i < livres.size(); i++)
+  Livre livress = new Livre( "titre4","auteur4","roman","2020");
+  if (livres.contains(livress)) {
+   System.out.println("auteur trouver");
+  }
+  else {
+   System.out.println("auteur pas trouver");
+  }
+
+  /*for (int i = 0; i < livres.size(); i++)
    if (livres.get(i).getAuteur() == auteur){
     l = livres.get(i);
+    System.out.println("Touver");
     break;
   }
+   */
   return l;
  }
 

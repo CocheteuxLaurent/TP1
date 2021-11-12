@@ -96,6 +96,12 @@ public Livre CreationLivre(){
                               bibliothèque.ajoutDvd(dvd);
                               break;
 
+                      case 4 :
+
+                              bibliothèque.chercherLivreParAuteur("auteur4");
+
+                              break;
+
               }
          }
         while (choix != 0);
