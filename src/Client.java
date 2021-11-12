@@ -6,6 +6,7 @@ public class Client {
     private  int compteurLivresEmpruntes;
     private  static int compteur = 0;
 
+
     public  Client (String nom, String prenom, int numeroClient, String telephone){
         this.nom = nom;
         this.prenom = prenom;
@@ -26,5 +27,10 @@ public class Client {
     public  String getTelephone(){return telephone;}
 
     public  int getCompteurLivresEmpruntes(){return  compteurLivresEmpruntes;}
+
+    public void incrementerCompteurLivre(){compteurLivresEmpruntes++;}
+
+    public void decrementerCompteurLivre(){compteurLivresEmpruntes--;}
+
 
 }
