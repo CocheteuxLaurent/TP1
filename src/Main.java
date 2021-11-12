@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -71,8 +70,9 @@ public Livre CreationLivre(){
               System.out.println("1 - Enregistrer un nouveau livre ");
               System.out.println("2 - Enregistrer une nouvelle revue ");
               System.out.println("3 - Enregistrer un nouveau dvd ");
-              System.out.println("4 - Rechercher un livre par son auteur ");
-              System.out.println("5 - Rechercher un livre par sa date de publication ");
+              System.out.println("4 - Rechercher un auteur d'un livre ");
+              System.out.println("5 - Rechercher un auteur d'un dvd ");
+              System.out.println("6 - Rechercher un auteur d'une revue");
               System.out.println("0 - Quitter ");
               System.out.println();
               System.out.println(" Entrer votre choix : ");
@@ -97,10 +97,18 @@ public Livre CreationLivre(){
                               break;
 
                       case 4 :
-
-                              bibliothèque.chercherLivreParAuteur("auteur4");
-
+                              bibliothèque.chercherAuteur();
                               break;
+
+                      case 5 :
+                              bibliothèque.chercherArtiste();
+                              break;
+
+                      case 6 :
+                              bibliothèque.chercherDateRevue();
+                              break;
+
+
 
               }
          }
@@ -109,9 +117,7 @@ public Livre CreationLivre(){
 
 public static void main(String[] args) {
 Main main = new Main();
-//main.ajoutLivre();
-//main.ajoutRevue();
-//main.ajoutDvd();
+
 
 }
 

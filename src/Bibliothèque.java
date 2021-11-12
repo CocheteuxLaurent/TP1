@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 
 public class Bibliothèque {
@@ -6,6 +8,8 @@ public class Bibliothèque {
 private ArrayList<Livre> livres;
 private ArrayList<Revues> revues;
 private ArrayList<Dvd> dvds;
+private Scanner scanner;
+
 
 public Bibliothèque (){
  livres = new ArrayList<Livre>();
@@ -29,35 +33,56 @@ public Bibliothèque (){
   return dvd.getTitre();
  }
 
- public Livre chercherLivreParAuteur(String auteur) {
- System.out.println("Livre a trouver");
-  Livre l = null;
-  Livre livress = new Livre( "titre4","auteur4","roman","2020");
-  if (livres.contains(livress)) {
-   System.out.println("auteur trouver");
-  }
-  else {
-   System.out.println("auteur pas trouver");
-  }
+ public void chercherAuteur(){
 
-  /*for (int i = 0; i < livres.size(); i++)
-   if (livres.get(i).getAuteur() == auteur){
-    l = livres.get(i);
-    System.out.println("Touver");
-    break;
+  scanner = new Scanner(System.in);
+  System.out.println("Veuillez entrer le nom de l'auteur");
+  String auteurClavier = scanner.nextLine();
+  for (int i=0; i< livres.size(); i++){
+   if(livres.get(i).getAuteur().equals(auteurClavier)){
+    System.out.println("Voici les informations de l'auteur trouvé");
+    System.out.println("Titre :" + livres.get(i).getTitre().toString());
+    System.out.println("Auteur :" + livres.get(i).getAuteur().toString());
+    System.out.println("Genre :"+ livres.get(i).getGenre().toString());
+    System.out.println("Année dde publication :" + livres.get(i).getDatePublication().toString());
+   }else {
+    System.out.println("Votre auteur n'a pas était retrouvé");
+   }
   }
-   */
-  return l;
  }
 
- public Livre chercherLivreParDate(String datePublication) {
-  Livre l = null;
-  for (int i = 0; i < livres.size(); i++)
-   if (livres.get(i).getAuteur() == datePublication){
-    l = livres.get(i);
-    break;
+ public void chercherArtiste(){
+  scanner = new Scanner(System.in);
+
+  System.out.println("Veuillez entrer le nom d'un artiste");
+  String nomArtiste = scanner.nextLine();
+  for (int i=0;i<dvds.size();i++){
+   if(dvds.get(i).getAuteur().equals(nomArtiste)){
+    System.out.println("Voici les informations de l'auteur trouvé");
+    System.out.println("Titre :" + dvds.get(i).getTitre().toString());
+    System.out.println("Auteur :" + dvds.get(i).getAuteur().toString());
+    System.out.println("Année de publication :" + dvds.get(i).getAnneeSortie().toString());
+   }else {
+    System.out.println("Votre artiste n'a pas était trouvé");
+   }
+  }
  }
- return l;
-}
+
+ public void chercherDateRevue(){
+  scanner = new Scanner(System.in);
+
+  System.out.println("Veuillez entrer la date d'une revue");
+  String dateRevue = scanner.nextLine();
+  for (int i=0;i<revues.size();i++){
+   if(revues.get(i).getAnneeEdition().equals(dateRevue)){
+    System.out.println("Voici les informations de la revue trouvé");
+    System.out.println("Titre :" + revues.get(i).getTitre().toString());
+    System.out.println("Auteur :" + revues.get(i).getNumero().toString());
+    System.out.println("Année d'édition :" + revues.get(i).getAnneeEdition().toString());
+   }else {
+    System.out.println("Votre date n'a pas était trouvé");
+   }
+  }
+ }
 
 }
