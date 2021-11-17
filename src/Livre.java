@@ -17,7 +17,7 @@ public class Livre {
             this.auteur = auteur;
             this.genre = genre;
             this.datePublication = datePublication;
-            this.compteur++;
+
 
 
 
@@ -39,29 +39,6 @@ public class Livre {
         return datePublication;
     }
 
-        public Date getDateEmprunt() {
-        return dateEmprunt;
-    }
-
-        public Client getEmprunteur() {
-        return clients;
-    }
-
-        public void setEmprunteur(Client client) {
-        clients = client;
-    }
-
-        public void setDateEmprunt(Date date) {
-        dateEmprunt = date;
-    }
-
-        public void emprunter(Client client) {
-        this.clients = client;
-        dateEmprunt = new Date();
-        System.out.println(dateEmprunt);
-
-
-    }
 
 }
 
